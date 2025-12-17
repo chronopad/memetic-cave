@@ -4,7 +4,7 @@ import subprocess
 from tqdm import trange
 
 TYPE = "exe"
-DOWNLOAD_LIMIT = 4
+DOWNLOAD_LIMIT = 10
 API_URL = "https://mb-api.abuse.ch/api/v1/"
 AUTH_KEY = "8b9303cac813de92ba2ca1606aa79a14090bea5f95811b00"
 HASH_FILE = f"{TYPE}.hash"

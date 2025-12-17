@@ -3,8 +3,10 @@ import struct
 import shutil
 import sys
 
-FILE_IN = "malwares/90e8b7e31fd00f3209ed27b8eb5f74ac9b0b29aa9eeacc116518c9912ab11378.exe"
-FILE_OUT = "patched/90e8b7e31fd00f3209ed27b8eb5f74ac9b0b29aa9eeacc116518c9912ab11378_patched.exe"
+sha256 = sys.argv[1]
+
+FILE_IN = f"malwares/{sha256}.exe"
+FILE_OUT = f"patched/{sha256}.exe"
 
 def align(val, to):
     if val % to == 0: return val
