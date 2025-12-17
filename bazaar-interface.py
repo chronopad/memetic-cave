@@ -2,6 +2,7 @@ import requests
 import os 
 import subprocess
 from tqdm import trange
+import sys
 
 TYPE = "exe"
 DOWNLOAD_LIMIT = 10
@@ -59,6 +60,9 @@ def extract_sample(sha256):
         stderr=subprocess.DEVNULL,
         check=False,
     )
+
+if sys.argv[1]:
+    DOWNLOAD_LIMIT = int(sys.argv[1])
 
 hashes = get_hashes()
 print("Found hashes!")
